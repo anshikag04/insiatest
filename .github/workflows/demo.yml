@@ -1,0 +1,17 @@
+name: version detect
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs: 
+  findVersion:
+    name: Find version of code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Read version
+        id: getversion
+        run: echo "::set-output name=version::$(cat VERSION)"
