@@ -14,4 +14,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Read version
         id: getversion
-        run: cat main.js
+        run: cat ./package-lock.json
+      - run: |
+          echo "${{fromJson(steps.set_var.outputs.packageJson).version}}"
