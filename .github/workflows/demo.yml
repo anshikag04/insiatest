@@ -24,7 +24,7 @@ jobs:
           path: 'package.json'
           prop_path: 'version'
       - name: Shows Version
-        run: echo ${{steps.getversion.outputs.prop_path}}
+        run: echo ${{steps.getversion.outputs.prop}}
 
 
 
