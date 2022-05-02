@@ -15,5 +15,4 @@ jobs:
       - name: Read version
         id: getversion
         run: cat ./package-lock.json
-      - run: |
-          echo "${{fromJson(steps.set_var.outputs.packageJson).version}}"
+      - run: echo "${{fromJson(steps.getversion.outputs.packageJson).version}}"
