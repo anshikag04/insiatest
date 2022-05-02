@@ -23,7 +23,8 @@ jobs:
         with:
           path: 'package.json'
           prop_path: 'version'
-          run: echo ${{steps.getversion.outputs.prop_path}}
+      - name: Shows Version
+        run: echo ${{steps.getversion.outputs.prop_path}}
 
 
 
